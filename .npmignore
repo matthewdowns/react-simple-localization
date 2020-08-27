@@ -1,7 +1,9 @@
-node_modules
-src
+.babelrc
+.git
 .gitignore
 .npmignore
+node_modules
+src
 package-lock.json
 rollup.config.js
 tsconfig.json

@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import babel from '@rollup/plugin-babel';
+import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import { dependencies } from './package.json';
 
@@ -27,7 +27,7 @@ module.exports = (argv, env) => {
             }
         ],
         plugins: [
-            babel({ babelHelpers: 'bundled' }),
+            babel(),
             terser()
         ],
         external: Object.keys(dependencies)
