@@ -5,17 +5,19 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prebuild": "rimraf build dist",
-    "build": "npm run build:tsc && npm run build:rollup",
+    "build": "rimraf build dist && npm run build:tsc && npm run build:rollup",
     "build:tsc": "tsc",
     "build:rollup": "rollup -c",
-    "prepublish": "npm run build"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublish": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matthewdowns/translate.git"
   },
   "keywords": [
+    "react",
     "translate"
   ],
   "author": "Matthew Downs",
@@ -25,17 +27,25 @@
   },
   "homepage": "https://github.com/matthewdowns/translate#readme",
   "dependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@types/jest": "^26.0.10",
     "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
+    "jest": "^26.4.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.26.5",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^7.0.0",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }
 }
