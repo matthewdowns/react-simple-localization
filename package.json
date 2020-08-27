@@ -1,0 +1,29 @@
+{
+  "name": "translate",
+  "version": "1.0.0",
+  "description": "A simple translation library that allows you to specify translations for different locales.",
+  "main": "dist/es/index.js",
+  "scripts": {
+    "build:es": "",
+    "build:umd": "",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewdowns/translate.git"
+  },
+  "keywords": [
+    "translate"
+  ],
+  "author": "Matthew Downs",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/matthewdowns/translate/issues"
+  },
+  "homepage": "https://github.com/matthewdowns/translate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^2.26.5",
+    "typescript": "^4.0.2"
+  }
+}
