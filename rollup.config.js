@@ -1,13 +1,10 @@
-import { resolve } from 'path';
+import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
-import { dependencies } from './package.json';
 
 module.exports = (argv, env) => {
-
-
     return {
-        input: resolve(__dirname, './lib/index.js'),
+        input: './lib/index.js',
         output: [
             {
                 file: 'dist/react-translate.common.js',
@@ -23,13 +20,17 @@ module.exports = (argv, env) => {
                 file: `dist/react-translate.umd.js`,
                 name: 'ReactTranslate',
                 format: 'umd',
-                sourcemap: true
+                sourcemap: true,
+                globals: {
+                    'react': 'React'
+                }
             }
         ],
         plugins: [
+            nodeResolve(),
             babel(),
             terser()
         ],
-        external: Object.keys(dependencies)
+        external: ['react']
     };
 };
