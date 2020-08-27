@@ -1,7 +1,6 @@
 import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
-import { name } from './package.json';
 
 module.exports = (argv, env) => {
     return {
