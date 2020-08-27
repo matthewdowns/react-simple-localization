@@ -1,6 +1,6 @@
 {
   "name": "react-simple-localization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Localization is a simple library consisting of a Translate component using React's context API to update content dynamically.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
