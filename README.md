@@ -38,8 +38,6 @@ import React, { useContext } from 'react';
 import { LocalizationContext, Translate } from 'react-simple-localization';
 
 const MyComponent = () => {
-    const localization = useContext(LocalizationContext);
-
     return (
         <div>
             <Translate en="Hello" es="Hola" de="Guten Tag" fr="Bonjour" it="Salve" ru="Zdravstvuyte" />
