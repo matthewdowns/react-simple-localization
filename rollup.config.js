@@ -8,17 +8,17 @@ module.exports = (argv, env) => {
         input: './lib/index.js',
         output: [
             {
-                file: `dist/${name}.common.js`,
+                file: `dist/cjs/index.js`,
                 format: 'cjs',
                 sourcemap: true
             },
             {
-                file: `dist/${name}.es.js`,
+                file: `dist/es/index.js`,
                 format: 'es',
                 sourcemap: true
             },
             {
-                file: `dist/${name}.umd.js`,
+                file: `dist/umd/index.js`,
                 name: 'ReactSimpleLocalization',
                 format: 'umd',
                 sourcemap: true,
