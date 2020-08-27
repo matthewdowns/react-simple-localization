@@ -1,7 +1,7 @@
 {
-  "name": "@matthewdowns/react-translate",
+  "name": "react-simple-localization",
   "version": "1.1.0",
-  "description": "A React component that allows you to specify translations for different languages.",
+  "description": "React Localization is a simple library consisting of a Translate component using React's context API to update content dynamically.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matthewdowns/translate.git"
+    "url": "git+https://github.com/matthewdowns/react-simple-localization.git"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "Matthew Downs",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/matthewdowns/translate/issues"
+    "url": "https://github.com/matthewdowns/react-simple-localization/issues"
   },
-  "homepage": "https://github.com/matthewdowns/translate#readme",
+  "homepage": "https://github.com/matthewdowns/react-simple-localization#readme",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
