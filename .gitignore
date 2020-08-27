@@ -50,6 +50,9 @@ typings/
 # TypeScript cache
 *.tsbuildinfo
 
+# Config file for npm publish
+.npmrc
+
 # Optional npm cache directory
 .npm
 
