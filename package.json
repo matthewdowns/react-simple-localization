@@ -18,6 +18,8 @@
     "url": "git+https://github.com/matthewdowns/react-simple-localization.git"
   },
   "keywords": [
+    "languages",
+    "localization",
     "react",
     "translate"
   ],
