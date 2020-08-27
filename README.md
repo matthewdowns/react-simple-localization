@@ -1,5 +1,5 @@
 # react-simple-localization
-React Localization is a simple library consisting of a Translate component using React's context API to update content dynamically.
+A simple library consisting of a Translate component using React's context API to update content dynamically.
 
 ## Installation
 `npm i --save react-simple-localization`
