@@ -1,23 +1,35 @@
 import { resolve } from 'path';
-import del from 'rollup-plugin-delete';
-import typescript from 'rollup-plugin-typescript';
-import { name } from './package.json';
+import babel from '@rollup/plugin-babel';
+import { terser } from 'rollup-plugin-terser';
+import { dependencies } from './package.json';
 
 module.exports = (argv, env) => {
 
 
     return {
-        input: resolve(__dirname, './lib/index.ts'),
-        name,
+        input: resolve(__dirname, './lib/index.js'),
         output: [
             {
-                dir: './build/es',
-                format: 'es'
+                file: 'dist/react-translate.common.js',
+                format: 'cjs',
+                sourcemap: true
+            },
+            {
+                file: 'dist/react-translate.es.js',
+                format: 'es',
+                sourcemap: true
+            },
+            {
+                file: `dist/react-translate.umd.js`,
+                name: 'ReactTranslate',
+                format: 'umd',
+                sourcemap: true
             }
         ],
         plugins: [
-            del({ targets: [resolve(__dirname, './build')]}),
-            typescript()
-        ]
+            babel({ babelHelpers: 'bundled' }),
+            terser()
+        ],
+        external: Object.keys(dependencies)
     };
 };
