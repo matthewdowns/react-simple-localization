@@ -1,24 +1,25 @@
 import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
+import { name } from './package.json';
 
 module.exports = (argv, env) => {
     return {
         input: './lib/index.js',
         output: [
             {
-                file: 'dist/react-translate.common.js',
+                file: `dist/${name}.common.js`,
                 format: 'cjs',
                 sourcemap: true
             },
             {
-                file: 'dist/react-translate.es.js',
+                file: `dist/${name}.es.js`,
                 format: 'es',
                 sourcemap: true
             },
             {
-                file: `dist/react-translate.umd.js`,
-                name: 'ReactTranslate',
+                file: `dist/${name}.umd.js`,
+                name: 'ReactSimpleLocalization',
                 format: 'umd',
                 sourcemap: true,
                 globals: {
