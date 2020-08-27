@@ -2,10 +2,9 @@
   "name": "translate",
   "version": "1.0.0",
   "description": "A simple translation library that allows you to specify translations for different locales.",
-  "main": "dist/es/index.js",
+  "main": "index.js",
   "scripts": {
-    "build:es": "",
-    "build:umd": "",
+    "build": "rollup -c",
     "test": ""
   },
   "repository": {
@@ -24,6 +23,9 @@
   "dependencies": {},
   "devDependencies": {
     "rollup": "^2.26.5",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^2.0.1",
     "typescript": "^4.0.2"
   }
 }
