@@ -5,9 +5,10 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rimraf build dist && npm run build:tsc && npm run build:rollup",
-    "build:tsc": "tsc",
-    "build:rollup": "rollup -c",
+    "prebuild": "rimraf lib dist",
+    "build": "npm run build:tsc && npm run build:rollup",
+    "build:tsc": "tsc -p ./tsconfig.json",
+    "build:rollup": "rollup -c ./rollup.config.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepublish": "npm run test && npm run build"
