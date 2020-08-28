@@ -1,4 +1,4 @@
-# react-translate
+# ReactTranslate
 A simple component that handles language translations using the React context API.
 
 ![Shields.io badge](https://img.shields.io/david/matthewdowns/react-translate)
@@ -48,8 +48,26 @@ const MyComponent = () => {
 }
 ```
 
-## [Code of Conduct](./CODE_OF_CONDUCT.md) 
+There is also a `LanguageSelect` component available that allows you to easily change languages.
 
-## [Contributing](./CONTRIBUTING.md)
+```js
+import React, { useContext } from 'react';
+import { LanguageSelect } from 'react-translate';
 
-## [License](./LICENSE)
+const MyFooter = () => {
+    return (
+        <footer>
+            <LanguageSelect display="shortcode" />
+        </footer>
+    )
+}
+```
+
+### [Contributing](./CONTRIBUTING.md)
+Please read our guide for information on how to suggest code changes.
+
+### [Code of Conduct](./CODE_OF_CONDUCT.md) 
+We encourage you to read our code of conduct to know what is and isn't tolerated by interacting with our repository.
+
+### [License](./LICENSE)
+ReactTranslate is [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/) licensed.
