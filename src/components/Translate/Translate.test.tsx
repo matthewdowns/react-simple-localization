@@ -4,7 +4,6 @@ import LocalizationContext, { LocalizationContextState } from '../../context/Loc
 import Translate from './Translate';
 import { TranslateProps } from './Translate.types';
 import Languages from "../../types/Languages";
-import Locales from "../../types/Locales";
 
 const renderTranslate = (
     props: {
@@ -19,7 +18,7 @@ const renderTranslate = (
             </span>
         </LocalizationContext.Provider>
     );
-}
+};
 
 describe("Translate", () => {
     it("should display a English translation", async () => {
