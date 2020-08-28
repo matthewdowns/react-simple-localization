@@ -1,16 +1,18 @@
-# react-simple-localization
-A simple library consisting of a Translate component using React's context API to update content dynamically.
+# react-translate
+A simple component that handles language translations using the React context API.
+
+![Shields.io badge](https://img.shields.io/david/matthewdowns/react-translate)
 
 ## Installation
-`npm i --save react-simple-localization`
+`npm i --save react-translate`
 
 ## Usage
 
 At the root of your app, set up your localization context provider:
 
-```ts
+```js
 import { useState } from 'react';
-import { Languages, Locales, LocalizationContext } from 'react-simple-localization';
+import { Languages, Locales, LocalizationContext } from 'react-translate';
 
 const App = () => {
     const [currentLanguage, setCurrentLanguage] = useState<Languages>(Languages.en);
@@ -31,11 +33,11 @@ const App = () => {
 }
 ```
 
-You can then use the `Translate` component which will automatically update it's text to the proper language/locale whenever the context is updated.
+You can then use the `Translate` component which will update it's translation whenever LocalizationContext's `language` property is updated.
 
-```
+```js
 import React, { useContext } from 'react';
-import { LocalizationContext, Translate } from 'react-simple-localization';
+import { LocalizationContext, Translate } from 'react-translate';
 
 const MyComponent = () => {
     return (
@@ -45,3 +47,7 @@ const MyComponent = () => {
     )
 }
 ```
+
+## [Code of Conduct](./CODE_OF_CONDUCT.md) 
+
+## [Contributing](./CONTRIBUTING.md)
