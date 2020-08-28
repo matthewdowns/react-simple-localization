@@ -1,6 +1,6 @@
 {
   "name": "@matthewdowns/react-translate",
-  "version": "1.0.2",
+  "version": "0.0.0",
   "description": "A simple component that handles language translations using the React context API.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
