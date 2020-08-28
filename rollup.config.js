@@ -1,6 +1,7 @@
 import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
+import { peerDependencies } from './package.json';
 
 module.exports = (argv, env) => {
     return {
@@ -18,11 +19,12 @@ module.exports = (argv, env) => {
             },
             {
                 file: `dist/umd/index.js`,
-                name: 'ReactSimpleLocalization',
+                name: 'ReactTranslate',
                 format: 'umd',
                 sourcemap: true,
                 globals: {
-                    'react': 'React'
+                    'react': 'React',
+                    'react-dom': 'ReactDOM'
                 }
             }
         ],
@@ -31,6 +33,6 @@ module.exports = (argv, env) => {
             babel(),
             terser()
         ],
-        external: ['react']
+        external: Object.keys(peerDependencies)
     };
 };
