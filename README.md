@@ -1,5 +1,5 @@
 # ReactTranslate
-A simple component that handles language translations using the React context API.
+The core library for React Translate.
 
 ![Shields.io badge](https://img.shields.io/david/react-translate/core)
 
