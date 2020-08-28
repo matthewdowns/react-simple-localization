@@ -1,7 +1,7 @@
 {
   "name": "@react-translate/core",
   "version": "1.0.0",
-  "description": "A simple component that handles language translations using the React context API.",
+  "description": "The core library for React Translate.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
