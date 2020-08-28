@@ -1,4 +1,4 @@
-# ReactTranslate
+# React Translate
 The core library for React Translate.
 
 ![Shields.io badge](https://img.shields.io/david/react-translate/core)
