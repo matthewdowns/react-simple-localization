@@ -37,7 +37,7 @@ You can then use the `Translate` component which will update it's translation wh
 
 ```js
 import React, { useContext } from 'react';
-import { LocalizationContext, Translate } from 'react-translate';
+import { Translate } from 'react-translate';
 
 const MyComponent = () => {
     return (
