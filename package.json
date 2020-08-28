@@ -1,5 +1,5 @@
 {
-  "name": "@react-translate/react-translate",
+  "name": "@react-translate/core",
   "version": "1.0.0",
   "description": "A simple component that handles language translations using the React context API.",
   "main": "lib/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-translate/react-translate.git"
+    "url": "git+https://github.com/react-translate/core.git"
   },
   "keywords": [
     "languages",
@@ -26,9 +26,9 @@
   "author": "Matthew Downs",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/react-translate/react-translate/issues"
+    "url": "https://github.com/react-translate/core/issues"
   },
-  "homepage": "https://github.com/react-translate/react-translate#readme",
+  "homepage": "https://github.com/react-translate/core#readme",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
