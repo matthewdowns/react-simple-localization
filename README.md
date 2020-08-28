@@ -51,3 +51,5 @@ const MyComponent = () => {
 ## [Code of Conduct](./CODE_OF_CONDUCT.md) 
 
 ## [Contributing](./CONTRIBUTING.md)
+
+## [License](./LICENSE)
