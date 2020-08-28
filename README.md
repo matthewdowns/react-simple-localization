@@ -1,10 +1,10 @@
 # ReactTranslate
 A simple component that handles language translations using the React context API.
 
-![Shields.io badge](https://img.shields.io/david/matthewdowns/react-translate)
+![Shields.io badge](https://img.shields.io/david/react-translate/react-translate)
 
 ## Installation
-`npm i --save @matthewdowns/react-translate`
+`npm i --save @react-translate/react-translate`
 
 ## Usage
 
@@ -12,7 +12,7 @@ At the root of your app, set up your localization context provider:
 
 ```js
 import { useState } from 'react';
-import { Languages, Locales, LocalizationContext } from '@matthewdowns/react-translate';
+import { Languages, Locales, LocalizationContext } from '@react-translate/react-translate';
 
 const App = () => {
     const [currentLanguage, setCurrentLanguage] = useState<Languages>(Languages.en);
@@ -37,7 +37,7 @@ You can then use the `Translate` component which will update it's translation wh
 
 ```js
 import React, { useContext } from 'react';
-import { Translate } from '@matthewdowns/react-translate';
+import { Translate } from '@react-translate/react-translate';
 
 const MyComponent = () => {
     return (
@@ -52,7 +52,7 @@ There is also a `LanguageSelect` component available that allows you to easily c
 
 ```js
 import React, { useContext } from 'react';
-import { LanguageSelect } from '@matthewdowns/react-translate';
+import { LanguageSelect } from '@react-translate/react-translate';
 
 const MyFooter = () => {
     return (

@@ -23,7 +23,7 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 ## Any contributions you make will be under the GPL-3.0 Software License
 In short, when you submit code changes, your submissions are understood to be under the same [GPL-3.0 License](https://choosealicense.com/licenses/gpl-3.0/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report bugs using Github's [issues](https://github.com/matthewdowns/react-translate/issues)
+## Report bugs using Github's [issues](https://github.com/react-translate/react-translate/issues)
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue](); it's that easy!
 
 ## Write bug reports with detail, background, and sample code
