@@ -1,14 +1,11 @@
-import { useContext } from 'react';
-import LocalizationContext from '../context/LocalizationContext';
 import Languages from '../types/Languages';
 
-const translate = (translations: { [languageKey: string]: string }): string | undefined => {
-    const localization = useContext(LocalizationContext);
-    if (localization.language) {
+const translate = (language: Languages, translations: { [shortcode: string]: string }) => {
+    for (let shortcode in Languages) {
         //@ts-ignore
-        const language = Languages[localization.language] as Languages;
-        const languageKey = Object.keys({ [language]: null })[0];
-        return translations[languageKey];
+        if (Languages[shortcode] === language) {
+            return translations[shortcode];
+        }
     }
 };
 
