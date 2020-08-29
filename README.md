@@ -11,7 +11,7 @@ The core library for React Translate.
 At the root of your app, set up your localization context provider:
 
 ```js
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Languages, Locales, LocalizationContext } from '@react-translate/core';
 
 const App = () => {
@@ -48,17 +48,32 @@ const MyComponent = () => {
 }
 ```
 
-There is also a `LanguageSelect` component available that allows you to easily change languages.
+You can create your own custom `LanguageSelect` component to easily change languages.
 
 ```js
-import React, { useContext } from 'react';
-import { LanguageSelect } from '@react-translate/core';
+import React, { ChangeEvent, useContext } from 'react';
+import { Languages, LocalizationContext } from '@react-translate/core';
 
-const MyFooter = () => {
+const languageShortcodes = Object.keys(Languages);
+
+const LanguageSelect = () => {
+    const localization = useContext(LocalizationContext);
+
+    const updateLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
+        if (localization.update) {
+            //@ts-ignore
+            const language = Languages[e.target.value] as Language;
+
+            localization.update(language);
+        }
+    }
+
     return (
-        <footer>
-            <LanguageSelect display="shortcode" />
-        </footer>
+        <select onChange={updateLanguage}>
+            {languageShortcodes.map(shortcode => (
+                <option key={shortcode} value={shortcode}>{shortcode}</option>
+            ))}
+        </select>
     )
 }
 ```
