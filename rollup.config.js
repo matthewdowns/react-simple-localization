@@ -13,16 +13,17 @@ const config = (environment) => {
         babel(), 
         license({
             banner: {
-                commentStyle: 'regular',
+                commentStyle: 'none',
                 content: `
-                    @license ReactTranslate v${version}
-                    ${filename}
-
-                    Copyright (c) <%= moment().format('YYYY') %> React Translate.
-
-                    This source code is licensed under the ${licenseText} license found in the
-                    LICENSE file in the root directory of this source tree.
-                `
+/** @license ReactTranslate v${version}
+ * ${filename}
+ *
+ * Copyright (c) <%= moment().format('YYYY') %> React Translate.
+ *
+ * This source code is licensed under the ${licenseText} license found in
+ * the LICENSE file in the root directory of this source tree.
+ */
+`
             }
         })
     ];
