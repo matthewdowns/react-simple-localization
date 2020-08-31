@@ -37,43 +37,13 @@ You can then use the `Translate` component which will update it's translation wh
 
 ```js
 import React, { useContext } from 'react';
-import { Translate } from '@react-translate/core';
+import Translate from '@react-translate/core';
 
 const MyComponent = () => {
     return (
         <div>
             <Translate en="Hello" es="Hola" de="Guten Tag" fr="Bonjour" it="Salve" ru="Zdravstvuyte" />
         </div>
-    )
-}
-```
-
-You can create your own custom `LanguageSelect` component to easily change languages.
-
-```js
-import React, { ChangeEvent, useContext } from 'react';
-import { Languages, LocalizationContext } from '@react-translate/core';
-
-const languageShortcodes = Object.keys(Languages);
-
-const LanguageSelect = () => {
-    const localization = useContext(LocalizationContext);
-
-    const updateLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
-        if (localization.update) {
-            //@ts-ignore
-            const language = Languages[e.target.value] as Language;
-
-            localization.update(language);
-        }
-    }
-
-    return (
-        <select onChange={updateLanguage}>
-            {languageShortcodes.map(shortcode => (
-                <option key={shortcode} value={shortcode}>{shortcode}</option>
-            ))}
-        </select>
     )
 }
 ```
