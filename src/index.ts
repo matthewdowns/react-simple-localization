@@ -1,4 +1,6 @@
-export { default } from './components/Translate';
+// Copyright react-translate 2020
+
+export { default, default as Translate } from './components/Translate';
 
 export { default as LocalizationContext } from './context/LocalizationContext';
 
