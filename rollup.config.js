@@ -35,7 +35,11 @@ const config = (environment) => {
         input: './lib/index.js',
         output: [
             {
-                file: `dist/${filename}`,
+                file: `dist/cjs/${filename}`,
+                format: 'cjs'
+            },
+            {
+                file: `dist/umd/${filename}`,
                 name: 'ReactTranslate',
                 format: 'umd',
                 exports: 'named',
