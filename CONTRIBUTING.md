@@ -40,7 +40,8 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 ## Use a Consistent Coding Style
 * Code style rules can be found in the _.editorconfig_ file
 * Linting rules can be found in the _.eslintrc.json_ file
-  * You can try running `npm run lint` for style unification
+  * You can run `npm run lint` to display any errors/warnings
+  * Furthermore, running `npm run lint:fix` will automatically fix any errors/warnings
 
 ## License
 By contributing, you agree that your contributions will be licensed under its GPL-3.0 License.
