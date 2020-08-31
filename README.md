@@ -52,11 +52,13 @@ const MyComponent = () => {
 }
 ```
 
-### [Contributing](./CONTRIBUTING.md)
-Please read our guide for information on how to suggest code changes.
+## Contributing
+
+### [Contributing Guide](./CONTRIBUTING.md)
+Please read our contributing guide for information on how to suggest code changes.
 
 ### [Code of Conduct](./CODE_OF_CONDUCT.md) 
 We encourage you to read our code of conduct to know what is and isn't tolerated by interacting with our repository.
 
 ### [License](./LICENSE)
-ReactTranslate is [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/) licensed.
+React Translate is [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/) licensed.
