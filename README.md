@@ -3,6 +3,10 @@ The core library for React Translate.
 
 ![Shields.io badge](https://img.shields.io/david/react-translate/core)
 
+The latest distribution files can be found on UNPKG:
+- [CommonJS](https://unpkg.com/browse/@react-translate/core/dist/cjs/)
+- [UMD](https://unpkg.com/browse/@react-translate/core/dist/umd/)
+
 ## Installation
 `npm i --save @react-translate/core`
 
