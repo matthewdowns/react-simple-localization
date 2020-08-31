@@ -14,8 +14,8 @@ const config = (environment) => {
         license({
             banner: {
                 commentStyle: 'none',
-                content: `
-/** @license ReactTranslate v${version}
+                content: 
+`/** @license ReactTranslate v${version}
  * ${filename}
  *
  * Copyright (c) <%= moment().format('YYYY') %> React Translate.
@@ -37,7 +37,8 @@ const config = (environment) => {
         output: [
             {
                 file: `dist/cjs/${filename}`,
-                format: 'cjs'
+                format: 'cjs',
+                exports: 'named'
             },
             {
                 file: `dist/umd/${filename}`,
