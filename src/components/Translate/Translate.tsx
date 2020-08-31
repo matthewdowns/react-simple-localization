@@ -1,11 +1,13 @@
 import React, { Fragment, useContext, useEffect, useState } from 'react';
 import LocalizationContext from '../../context/LocalizationContext';
 import { TranslateProps } from './Translate.types';
-import Languages from '../../types/Languages';
+import { Languages } from '../../types';
 
 const languageKeys = Object.keys(Languages);
 
-const Translate = (props: TranslateProps) => {
+const LanguageRecords = Languages as Record<string, string>;
+
+const Translate = (props: TranslateProps): JSX.Element => {
     const localizationContext = useContext(LocalizationContext);
     const [text, setText] = useState<string>();
 
@@ -13,12 +15,10 @@ const Translate = (props: TranslateProps) => {
         if (localizationContext) {
             for (let i = 0; i < languageKeys.length; i++) {
                 try {
-                    //@ts-ignore
-                    const language = Languages[languageKeys[i] as string];
+                    const language = LanguageRecords[languageKeys[i]] as Languages;
                     
                     if (localizationContext.language === language) {
-                        //@ts-ignore
-                        const translation = props[languageKeys[i]];
+                        const translation = props[languageKeys[i] as keyof TranslateProps];
                         if (text !== translation) {
                             setText(translation);
                         }

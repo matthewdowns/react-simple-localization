@@ -1,10 +1,11 @@
 import Languages from '../types/Languages';
 
-const translate = (language?: Languages, translations?: { [shortcode: string]: string }) => {
+const LanguageRecords = Languages as Record<string, string>;
+
+const translate = (language?: Languages, translations?: { [shortcode: string]: string }): string | undefined => {
     if (language && translations) {
-        for (let shortcode in Languages) {
-            //@ts-ignore
-            if (Languages[shortcode] === language) {
+        for (const shortcode in Languages) {
+            if (LanguageRecords[shortcode] as Languages === language) {
                 return translations[shortcode];
             }
         }

@@ -1,9 +1,9 @@
-import React from "react";
-import { render, fireEvent, waitForElement } from "@testing-library/react";
+import React from 'react';
+import { render } from '@testing-library/react';
 import LocalizationContext, { LocalizationContextState } from '../../context/LocalizationContext';
 import Translate from './Translate';
 import { TranslateProps } from './Translate.types';
-import Languages from "../../types/Languages";
+import Languages from '../../types/Languages';
 
 const renderTranslate = (
     props: {
@@ -20,8 +20,8 @@ const renderTranslate = (
     );
 };
 
-describe("Translate", () => {
-    it("should display a English translation", async () => {
+describe('Translate', () => {
+    it('should display a English translation', async () => {
         const englishTranslation = 'Hello World';
 
         const { findByTestId } = renderTranslate({
@@ -38,7 +38,7 @@ describe("Translate", () => {
         expect(element).toHaveTextContent(englishTranslation);
     });
     
-    it("should display a Spanish translation", async () => {
+    it('should display a Spanish translation', async () => {
         const spanishTranslation = 'Hola Tierra';
 
         const { findByTestId } = renderTranslate({
@@ -55,7 +55,7 @@ describe("Translate", () => {
         expect(element).toHaveTextContent(spanishTranslation);
     });
 
-    it("should display a empty DOM element from not providing any translations", async () => {
+    it('should display a empty DOM element from not providing any translations', async () => {
         const { findByTestId } = renderTranslate({ localizationContext: { } });
 
         const element = await findByTestId('translate-test');
