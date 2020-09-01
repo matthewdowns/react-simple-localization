@@ -2,6 +2,7 @@
 .editorconfig
 .eslintrc.json
 .git
+.github
 .gitignore
 .npmignore
 
