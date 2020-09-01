@@ -54,10 +54,10 @@ const MyComponent = () => {
 
 ## Contributing
 
-### [Contributing Guide](./CONTRIBUTING.md)
+### [Contributing Guide](./.github/CONTRIBUTING.md)
 Please read our contributing guide for information on how to suggest code changes.
 
-### [Code of Conduct](./CODE_OF_CONDUCT.md) 
+### [Code of Conduct](./.github/CODE_OF_CONDUCT.md) 
 We encourage you to read our code of conduct to know what is and isn't tolerated by interacting with our repository.
 
 ### [License](./LICENSE)

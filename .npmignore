@@ -13,7 +13,3 @@ jest.config.js
 package-lock.json
 rollup.config.js
 tsconfig.json
-
-CODE_OF_CONDUCT.md
-CONTRIBUTING.md
-SECURITY.md
