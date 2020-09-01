@@ -25,7 +25,12 @@
     "languages",
     "localization",
     "react",
-    "translate"
+    "translate",
+    "translation",
+    "internationalization",
+    "i18n",
+    "component",
+    "library"
   ],
   "author": "Matthew Downs",
   "license": "GPL-3.0",
